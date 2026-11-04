@@ -1,0 +1,17 @@
+# Candidate borrower-risk segments, written down BEFORE looking at results.
+# Rates are compared on matured loans. Discovery uses vintages up to 2014 and confirmation uses 2015.
+min_segment_records: 1000
+alpha: 0.05
+segments:
+  - {name: "High DTI (30+)", attribute: dti, segment: "dti >= 30", comparison: "dti < 30", uses_lc_pricing: false}
+  - {name: "High utilization (80%+)", attribute: revol_util, segment: "revol_util >= 80", comparison: "revol_util < 80", uses_lc_pricing: false}
+  - {name: "Lower FICO (under 680)", attribute: fico, segment: "fico_mid < 680", comparison: "fico_mid >= 680", uses_lc_pricing: false}
+  - {name: "Lower income (under 40k)", attribute: annual_inc, segment: "annual_inc < 40000", comparison: "annual_inc >= 40000", uses_lc_pricing: false}
+  - {name: "Large loan (25k+)", attribute: loan_amnt, segment: "loan_amnt >= 25000", comparison: "loan_amnt < 25000", uses_lc_pricing: false}
+  - {name: "Short employment (under 1 year)", attribute: emp_years, segment: "emp_years < 1", comparison: "emp_years >= 1", uses_lc_pricing: false}
+  - {name: "Recent inquiries (2+ in 6 months)", attribute: inq_last_6mths, segment: "inq_last_6mths >= 2", comparison: "inq_last_6mths < 2", uses_lc_pricing: false}
+  - {name: "Loan above 30% of income", attribute: loan_to_income, segment: "loan_to_income >= 0.30", comparison: "loan_to_income < 0.30", uses_lc_pricing: false}
+  - {name: "Layered: FICO under 680, DTI 20+, utilization 60%+", attribute: composite, segment: "fico_mid < 680 and dti >= 20 and revol_util >= 60", comparison: "not (fico_mid < 680 and dti >= 20 and revol_util >= 60)", uses_lc_pricing: false}
+  - {name: "Layered vs prime: FICO under 680, DTI 20+, utilization 60%+ vs FICO 720+, DTI under 15, utilization under 40%", attribute: composite, segment: "fico_mid < 680 and dti >= 20 and revol_util >= 60", comparison: "fico_mid >= 720 and dti < 15 and revol_util < 40", uses_lc_pricing: false}
+  - {name: "Grade D to G", attribute: grade, segment: "grade in ['D','E','F','G']", comparison: "grade in ['A','B','C']", uses_lc_pricing: true}
+  - {name: "Grade E to G vs Grade A", attribute: grade, segment: "grade in ['E','F','G']", comparison: "grade == 'A'", uses_lc_pricing: true}

@@ -1,0 +1,8 @@
+check_name,violations,status
+fact_rows_match_accepted,0,PASS
+loan_ids_not_null_and_unique,0,PASS
+star_join_does_not_fan_out,0,PASS
+default_flag_set_only_when_resolved,0,PASS
+cohort_loans_all_labelled,0,PASS
+splits_do_not_overlap_in_time,0,PASS
+scores_only_on_heldout_loans,0,PASS

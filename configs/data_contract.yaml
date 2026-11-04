@@ -1,0 +1,43 @@
+# Data contract for accepted_2007_to_2018Q4.csv. Column names were verified against the file.
+# Each quarantine rule is a Spark SQL predicate over typed columns (TRUE = violation).
+# src/credit_risk/contracts.py implements the same rules separately in pandas so the two can be compared.
+dataset: lendingclub_accepted_2007_2018q4
+version: 2
+required_columns: [id, member_id, loan_amnt, funded_amnt, term, int_rate, installment, grade, sub_grade,
+  emp_length, home_ownership, annual_inc, verification_status, issue_d, loan_status, purpose, addr_state,
+  dti, delinq_2yrs, earliest_cr_line, fico_range_low, fico_range_high, inq_last_6mths, open_acc, pub_rec,
+  revol_bal, revol_util, total_acc, application_type, mort_acc, pub_rec_bankruptcies]
+quarantine_rules:
+  - {id: Q01_non_loan_row, category: consistency, expr: "loan_id IS NULL", description: "ID is not numeric. These are the file's summary footer rows, not loans."}
+  - {id: Q02_duplicate_id, category: duplicates, expr: "id_occurrence > 1", description: "Second or later occurrence of a loan ID."}
+  - {id: Q03_missing_status, category: missing, expr: "loan_id IS NOT NULL AND loan_status IS NULL", description: "Loan status is missing."}
+  - {id: Q04_invalid_issue_date, category: invalid, expr: "loan_id IS NOT NULL AND issue_date IS NULL", description: "Issue month is missing or unparseable."}
+  - {id: Q05_invalid_loan_amount, category: invalid, expr: "loan_id IS NOT NULL AND (loan_amnt IS NULL OR loan_amnt <= 0 OR loan_amnt > 40000)", description: "Loan amount is missing, not positive, or above the 40,000 maximum seen in the product."}
+  - {id: Q06_funded_above_requested, category: consistency, expr: "loan_id IS NOT NULL AND (funded_amnt IS NULL OR funded_amnt <= 0 OR funded_amnt > loan_amnt)", description: "Funded amount is missing, not positive, or above the loan amount."}
+  - {id: Q07_invalid_term, category: invalid, expr: "loan_id IS NOT NULL AND (term_months IS NULL OR term_months NOT IN (36, 60))", description: "Term is not 36 or 60 months."}
+  - {id: Q08_invalid_interest_rate, category: invalid, expr: "loan_id IS NOT NULL AND (int_rate IS NULL OR int_rate <= 0 OR int_rate > 40)", description: "Interest rate is missing or outside (0, 40]."}
+  - {id: Q09_installment_below_principal, category: consistency, expr: "loan_id IS NOT NULL AND (installment IS NULL OR installment <= 0 OR installment * term_months < funded_amnt * 0.99)", description: "Installments over the term do not repay the funded principal."}
+  - {id: Q10_invalid_grade, category: invalid, expr: "loan_id IS NOT NULL AND (grade IS NULL OR grade NOT IN ('A','B','C','D','E','F','G'))", description: "Grade is not A to G."}
+  - {id: Q11_subgrade_grade_mismatch, category: consistency, expr: "loan_id IS NOT NULL AND (sub_grade IS NULL OR substr(sub_grade, 1, 1) <> grade)", description: "Sub-grade letter disagrees with grade."}
+  - {id: Q12_invalid_annual_income, category: invalid, expr: "loan_id IS NOT NULL AND (annual_inc IS NULL OR annual_inc <= 0)", description: "Annual income is missing or not positive."}
+  - {id: Q13_invalid_dti, category: invalid, expr: "loan_id IS NOT NULL AND (dti < 0 OR dti > 100)", description: "Debt-to-income is outside 0 to 100 (the file holds -1 and 999 placeholders). A null is allowed and imputed."}
+  - {id: Q14_invalid_fico, category: consistency, expr: "loan_id IS NOT NULL AND (fico_range_low IS NULL OR fico_range_high IS NULL OR fico_range_low > fico_range_high OR fico_range_low < 300 OR fico_range_high > 850)", description: "FICO range is missing, inverted, or outside 300 to 850."}
+  - {id: Q15_invalid_revolving, category: invalid, expr: "loan_id IS NOT NULL AND (revol_bal IS NULL OR revol_bal < 0 OR revol_util < 0)", description: "Revolving balance is missing or negative, or utilization is negative."}
+  - {id: Q16_negative_credit_counts, category: invalid, expr: "loan_id IS NOT NULL AND (delinq_2yrs < 0 OR pub_rec < 0 OR inq_last_6mths < 0 OR open_acc < 0 OR total_acc < 0)", description: "A credit-history count is negative."}
+  - {id: Q17_open_above_total_accounts, category: consistency, expr: "loan_id IS NOT NULL AND open_acc > total_acc", description: "Open accounts exceed total accounts."}
+  - {id: Q18_invalid_credit_history_date, category: consistency, expr: "loan_id IS NOT NULL AND (earliest_cr_date IS NULL OR earliest_cr_date > issue_date)", description: "Earliest credit line is missing, unparseable, or after the issue month."}
+# Flags are counted and reported. They do not remove rows, as these values can be legitimate.
+warning_flags:
+  - {id: W01_missing_employment_length, expr: "emp_years IS NULL", description: "Employment length is missing. Kept as its own category."}
+  - {id: W02_missing_dti, expr: "dti IS NULL", description: "DTI is missing. Imputed inside the model pipeline."}
+  - {id: W03_missing_revol_util, expr: "revol_util IS NULL", description: "Utilization is missing. Imputed inside the model pipeline."}
+  - {id: W04_missing_mort_acc, expr: "mort_acc IS NULL", description: "Mortgage account count is missing, mostly in early vintages."}
+  - {id: W05_utilization_above_100, expr: "revol_util > 100", description: "Revolving utilization is above 100%, which is possible when over limit."}
+  - {id: W06_income_above_1m, expr: "annual_inc > 1000000", description: "Stated annual income is above 1,000,000. Kept and bounded by the log transform."}
+  - {id: W07_joint_application, expr: "application_type = 'Joint App'", description: "Joint application. Single-applicant income and DTI fields are used, a limitation."}
+status_groups:
+  resolved_good: ["Fully Paid"]
+  resolved_bad: ["Charged Off", "Default"]
+  open_performing: ["Current"]
+  open_delinquent: ["In Grace Period", "Late (16-30 days)", "Late (31-120 days)"]
+  excluded_policy: ["Does not meet the credit policy. Status:Fully Paid", "Does not meet the credit policy. Status:Charged Off"]

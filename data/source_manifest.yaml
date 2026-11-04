@@ -1,0 +1,22 @@
+# Provenance of the only source data used in this project.
+dataset_name: All Lending Club loan data (accepted loans file)
+original_publisher: LendingClub (public loan data releases, no longer offered directly)
+distributor: Kaggle dataset wordsforthewise/lending-club
+source_page: https://www.kaggle.com/datasets/wordsforthewise/lending-club
+download_url: https://www.kaggle.com/api/v1/datasets/download/wordsforthewise/lending-club
+license_as_listed: "CC0: Public Domain, per the Kaggle dataset metadata"
+retrieval_date: "2026-11-03"
+archive_sha256: b412cf8d26e30a6302cd5665f03d772987368ff15404e6987a5f910a0981da20
+source_file: accepted_2007_to_2018Q4.csv.gz
+source_sha256: 55c16f75120f897683f02e7aabcf080d0e4a20c4832feb1d592cfa941bd62a2d
+source_bytes_gz: 392582231
+uncompressed_bytes: 1675133810
+data_rows: 2260701    # includes 33 non-loan summary footer rows
+columns: 151
+period: Loans issued Jun 2007 to Dec 2018. The latest last-payment month in the file is Mar 2019.
+target_definition: "default_flag = 1 for Charged Off or Default, 0 for Fully Paid. Open loans have no label."
+null_handling: See configs/data_contract.yaml. member_id is empty on every row.
+restrictions: >
+  The raw file is git-ignored and re-downloaded from the instructions in data/README.md. It is a third-party
+  mirror, so it could not be checked against LendingClub directly. It contains approved loans only and is not
+  bank data. This project does not use the rejected-applications file in the same archive.

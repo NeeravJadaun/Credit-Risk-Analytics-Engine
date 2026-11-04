@@ -1,0 +1,8 @@
+check_name,status,observed,expected
+rows_partition_into_accepted_and_quarantined,PASS,2256322 + 4379,2260701
+quarantine_share_within_limit,PASS,0.001937,<= 0.02
+every_accepted_row_has_known_status,PASS,2256322,2256322
+loan_ids_unique_among_loans,PASS,2260668,2260668
+row_count_matches_control_total,PASS,2260701,2260701
+source_checksum_matches_manifest,PASS,55c16f75120f897683f02e7aabcf080d0e4a20c4832feb1d592cfa941bd62a2d,55c16f75120f897683f02e7aabcf080d0e4a20c4832feb1d592cfa941bd62a2d
+spark_and_pandas_agree_on_every_count,PASS,62 of 62 match,all match

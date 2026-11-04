@@ -1,0 +1,80 @@
+{
+  "cube_defaults": 99783,
+  "cube_loans": 673515,
+  "cube_matches_cohort": true,
+  "extracts": [
+    {
+      "columns": 15,
+      "file": "portfolio_cube.csv",
+      "rows": 98029,
+      "sha256": "9d27cb997db4f11497991e72efb65f4a754d0d861304797999f77c7052e55bba"
+    },
+    {
+      "columns": 13,
+      "file": "vintage_trends.csv",
+      "rows": 13,
+      "sha256": "19a796fa653b9e117e044dfafac49844766d715b3436bc78e2ee625f88291099"
+    },
+    {
+      "columns": 7,
+      "file": "delinquency_snapshot.csv",
+      "rows": 12,
+      "sha256": "b0e2e00b94473b7f26d3dffc3f3cfa74af5883d2647266cef76c46b818ae9df5"
+    },
+    {
+      "columns": 8,
+      "file": "kpi_indicators.csv",
+      "rows": 12,
+      "sha256": "5efa81c2fba113a95979e142831a5ec2dc23a3366b3c0e12fec83cd9c3ac2f27"
+    },
+    {
+      "columns": 36,
+      "file": "risk_findings.csv",
+      "rows": 12,
+      "sha256": "49e368846cf2f8c04d9327d0f9bba00af297e74b2864dc23903badf98bce0452"
+    },
+    {
+      "columns": 20,
+      "file": "model_metrics.csv",
+      "rows": 15,
+      "sha256": "690003ee6017b12d2b58fdb847d212d3625c75d1c0437590917ca5dd16820b94"
+    },
+    {
+      "columns": 6,
+      "file": "model_calibration.csv",
+      "rows": 10,
+      "sha256": "7c1302fa449cd14ceef197fffcb3d3fe118e0e819e84968d4e88db1cfa27a276"
+    },
+    {
+      "columns": 7,
+      "file": "model_score_deciles.csv",
+      "rows": 10,
+      "sha256": "57bbf139289f66a27306fa621f6df6456c760105f8e21f14c27281a3526bb3e1"
+    },
+    {
+      "columns": 13,
+      "file": "model_segment_performance.csv",
+      "rows": 62,
+      "sha256": "af72d9579c7818d0debb2a112d1cf82805f5ec498601395fa0e77c0b8242b565"
+    },
+    {
+      "columns": 17,
+      "file": "strategy_comparison.csv",
+      "rows": 10,
+      "sha256": "da504b1fc4e46fed35aaf8ece0c6277589ae98f2f66f73b1b53c365b4d01ff7e"
+    },
+    {
+      "columns": 12,
+      "file": "monitoring_results.csv",
+      "rows": 92,
+      "sha256": "57e4418a20ae3ee73d29443823e92ff01595d1fcac4e535ba6a7e215c2b82a3f"
+    },
+    {
+      "columns": 11,
+      "file": "data_quality_checks.csv",
+      "rows": 1,
+      "sha256": "2f01c923f855108c7f820a243d87a85faaeac183fa9a69cd8a345d88893cbd27"
+    }
+  ],
+  "workbook_exists": false
+}

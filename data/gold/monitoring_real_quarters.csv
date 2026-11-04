@@ -1,0 +1,21 @@
+batch_id,rule,metric,value,warn_level,critical_level,severity,simulation,provenance,triage
+2015-Q1,field_null_share,max_field_null_share,0.0004596481923450897,0.01,0.05,OK,False,Real data: 2015-Q1 vintage vs 2014 reference,"Query the affected field, compare with the prior batch, check the upstream feed."
+2015-Q1,default_rate_deviation,default_rate_abs_deviation,0.011080596421448152,0.01,0.03,WARN,False,Real data: 2015-Q1 vintage vs 2014 reference,Decompose the change into mix and within-segment rate before calling it deterioration.
+2015-Q1,score_psi,score_psi,0.00644913903694741,0.1,0.25,OK,False,Real data: 2015-Q1 vintage vs 2014 reference,PSI cut-offs are a heuristic. Check which score bins moved and which features drive them.
+2015-Q1,auc_drop,auc_drop,-0.002728996865223099,0.02,0.05,OK,False,Real data: 2015-Q1 vintage vs 2014 reference,Compare with the bootstrap range before escalating to the model owner.
+2015-Q1,calibration_gap,calibration_abs_gap,0.024320110630217565,0.01,0.03,WARN,False,Real data: 2015-Q1 vintage vs 2014 reference,Compare mean predicted with observed rate overall and by grade.
+2015-Q2,field_null_share,max_field_null_share,0.0003425724073497353,0.01,0.05,OK,False,Real data: 2015-Q2 vintage vs 2014 reference,"Query the affected field, compare with the prior batch, check the upstream feed."
+2015-Q2,default_rate_deviation,default_rate_abs_deviation,0.016552992630415903,0.01,0.03,WARN,False,Real data: 2015-Q2 vintage vs 2014 reference,Decompose the change into mix and within-segment rate before calling it deterioration.
+2015-Q2,score_psi,score_psi,0.010272493133267667,0.1,0.25,OK,False,Real data: 2015-Q2 vintage vs 2014 reference,PSI cut-offs are a heuristic. Check which score bins moved and which features drive them.
+2015-Q2,auc_drop,auc_drop,-0.004496598615697955,0.02,0.05,OK,False,Real data: 2015-Q2 vintage vs 2014 reference,Compare with the bootstrap range before escalating to the model owner.
+2015-Q2,calibration_gap,calibration_abs_gap,0.030600215856212934,0.01,0.03,CRITICAL,False,Real data: 2015-Q2 vintage vs 2014 reference,Compare mean predicted with observed rate overall and by grade.
+2015-Q3,field_null_share,max_field_null_share,0.0005437442227176336,0.01,0.05,OK,False,Real data: 2015-Q3 vintage vs 2014 reference,"Query the affected field, compare with the prior batch, check the upstream feed."
+2015-Q3,default_rate_deviation,default_rate_abs_deviation,0.008529401446550289,0.01,0.03,OK,False,Real data: 2015-Q3 vintage vs 2014 reference,Decompose the change into mix and within-segment rate before calling it deterioration.
+2015-Q3,score_psi,score_psi,0.014868898773242639,0.1,0.25,OK,False,Real data: 2015-Q3 vintage vs 2014 reference,PSI cut-offs are a heuristic. Check which score bins moved and which features drive them.
+2015-Q3,auc_drop,auc_drop,-0.011729275254051319,0.02,0.05,OK,False,Real data: 2015-Q3 vintage vs 2014 reference,Compare with the bootstrap range before escalating to the model owner.
+2015-Q3,calibration_gap,calibration_abs_gap,0.02623169545779469,0.01,0.03,WARN,False,Real data: 2015-Q3 vintage vs 2014 reference,Compare mean predicted with observed rate overall and by grade.
+2015-Q4,field_null_share,max_field_null_share,0.00042861332310676985,0.01,0.05,OK,False,Real data: 2015-Q4 vintage vs 2014 reference,"Query the affected field, compare with the prior batch, check the upstream feed."
+2015-Q4,default_rate_deviation,default_rate_abs_deviation,0.010914119247585702,0.01,0.03,WARN,False,Real data: 2015-Q4 vintage vs 2014 reference,Decompose the change into mix and within-segment rate before calling it deterioration.
+2015-Q4,score_psi,score_psi,0.02888548173474645,0.1,0.25,OK,False,Real data: 2015-Q4 vintage vs 2014 reference,PSI cut-offs are a heuristic. Check which score bins moved and which features drive them.
+2015-Q4,auc_drop,auc_drop,-0.009510514825565641,0.02,0.05,OK,False,Real data: 2015-Q4 vintage vs 2014 reference,Compare with the bootstrap range before escalating to the model owner.
+2015-Q4,calibration_gap,calibration_abs_gap,0.03248290230925817,0.01,0.03,CRITICAL,False,Real data: 2015-Q4 vintage vs 2014 reference,Compare mean predicted with observed rate overall and by grade.

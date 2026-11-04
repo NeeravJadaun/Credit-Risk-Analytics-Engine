@@ -1,0 +1,55 @@
+{
+  "etl_full": {
+    "note": "Single runs, not identical scope. The Spark run also writes silver and quarantine Parquet to HDFS, derives features and builds gold tables.",
+    "pandas_rules_and_cohort_seconds": 22.421360582928173,
+    "spark_on_hdfs_seconds": 24.23779512499459
+  },
+  "execution_mode": "single machine, local Spark with a one-DataNode HDFS. Not a cluster.",
+  "group_by_grade_query": {
+    "comparability_note": "Parquet holds validated rows and CSV holds all loan rows, a difference of about 0.2%.",
+    "csv_on_hdfs": {
+      "median_seconds": 1.559951875009574,
+      "runs": [
+        3.752898665959947,
+        1.559951875009574,
+        1.4942513749701902
+      ]
+    },
+    "pandas_csv_gz_seconds_single_run": 8.44954158400651,
+    "parquet_on_hdfs": {
+      "median_seconds": 0.14448858296964318,
+      "runs": [
+        0.5973757499596104,
+        0.12236554198898375,
+        0.14448858296964318
+      ]
+    },
+    "rows_csv": 2260668,
+    "rows_parquet": 2256322,
+    "speedup_factor_parquet_vs_csv": 10.796367733340684
+  },
+  "input_rows": 2260701,
+  "machine": {
+    "cpu_count": 10,
+    "machine": "arm64",
+    "memory_gb": 16.0,
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "python": "3.11.17"
+  },
+  "postgres_index": {
+    "median_seconds_with_index": 0.011457209009677172,
+    "median_seconds_without_index": 0.16635204199701548,
+    "parallel_workers": 0,
+    "plan_with_index": "HashAggregate  (cost=12843.39..12845.89 rows=200 width=48)\n  Group Key: p.grade\n  ->  Hash Join  (cost=44.41..12642.88 rows=26735 width=10)\n        Hash Cond: (f.product_key = p.product_key)\n        ->  Index Scan using idx_loan_date on fact_loan f  (cost=0.43..12528.52 rows=26735 width=6)\n              Index Cond: ((date_key >= 201501) AND (date_key <= 201503))\n              Filter: is_matured_cohort\n        ->  Hash  (cost=25.10..25.10 rows=1510 width=12)\n              ->  Seq Scan on dim_product p  (cost=0.00..25.10 rows=1510 width=12)",
+    "plan_without_index": "HashAggregate  (cost=74883.08..74885.58 rows=200 width=48)\n  Group Key: p.grade\n  ->  Nested Loop  (cost=0.16..74683.39 rows=26625 width=10)\n        ->  Seq Scan on fact_loan f  (cost=0.00..74005.85 rows=26625 width=6)\n              Filter: (is_matured_cohort AND (date_key >= 201501) AND (date_key <= 201503))\n        ->  Memoize  (cost=0.16..0.18 rows=1 width=12)\n              Cache Key: f.product_key\n              Cache Mode: logical\n              ->  Index Scan using dim_product_pkey on dim_product p  (cost=0.15..0.17 rows=1 width=12)\n                    Index Cond: (product_key = f.product_key)",
+    "query": "SELECT p.grade, COUNT(*), AVG(f.default_flag) FROM credit_risk.fact_loan f JOIN credit_risk.dim_product p USING (product_key) WHERE f.is_matured_cohort AND f.date_key BETWEEN 201501 AND 201503 GROUP BY p.grade",
+    "repeats": 5,
+    "speedup_factor": 14.519421078598509
+  },
+  "repeats": 3,
+  "spark_master": "local[4]",
+  "storage_bytes": {
+    "csv_on_hdfs": 1675133810,
+    "silver_parquet_on_hdfs": 126978656
+  }
+}

@@ -1,0 +1,31 @@
+# All values are ILLUSTRATIVE analyst assumptions for an educational exercise. Not bank policy.
+data_quality:
+  max_quarantine_share: 0.02       # hard stop
+monitoring:
+  reference_year: 2014
+  rules:
+    - {name: field_null_share, metric: max_field_null_share, warn: 0.01, critical: 0.05,
+       triage: "Query the affected field, compare with the prior batch, check the upstream feed."}
+    - {name: row_count_reconciliation, metric: row_count_gap_share, warn: 0.001, critical: 0.02,
+       triage: "Hard stop on publishing. Reconcile received rows with the expected control total."}
+    - {name: default_rate_deviation, metric: default_rate_abs_deviation, warn: 0.01, critical: 0.03,
+       triage: "Decompose the change into mix and within-segment rate before calling it deterioration."}
+    - {name: score_psi, metric: score_psi, warn: 0.10, critical: 0.25,
+       triage: "PSI cut-offs are a heuristic. Check which score bins moved and which features drive them."}
+    - {name: auc_drop, metric: auc_drop, warn: 0.02, critical: 0.05,
+       triage: "Compare with the bootstrap range before escalating to the model owner."}
+    - {name: calibration_gap, metric: calibration_abs_gap, warn: 0.01, critical: 0.03,
+       triage: "Compare mean predicted with observed rate overall and by grade."}
+strategy:
+  capacity_constraint: 0.10
+  sensitivity_capacities: [0.05, 0.10, 0.20]
+  top_share_grid: [0.05, 0.10, 0.20]
+  score_thresholds: [0.20, 0.25, 0.30]
+  combo_score_thresholds: [0.15, 0.20, 0.25]
+  combo_min_dti: 20
+  # Hypothetical unit costs in arbitrary units. Not revenue, loss, or capital estimates.
+  cost_scenarios:
+    - {name: fn_1_fp_1, false_negative: 1, false_positive: 1}
+    - {name: fn_3_fp_1, false_negative: 3, false_positive: 1}
+    - {name: fn_5_fp_1, false_negative: 5, false_positive: 1}
+    - {name: fn_10_fp_1, false_negative: 10, false_positive: 1}

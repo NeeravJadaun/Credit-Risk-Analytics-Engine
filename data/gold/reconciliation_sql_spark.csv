@@ -1,0 +1,159 @@
+metric,spark,sql,abs_difference,status
+segment.dti_band.1. Under 10.loans,131465.0,131465.0,0.0,PASS
+segment.dti_band.1. Under 10.rate,0.1146008443311908,0.11460084433119082,1.3877787807814457e-17,PASS
+segment.dti_band.2. 10-20.loans,290692.0,290692.0,0.0,PASS
+segment.dti_band.2. 10-20.rate,0.1360787362569317,0.13607873625693173,2.7755575615628914e-17,PASS
+segment.dti_band.3. 20-30.loans,199889.0,199889.0,0.0,PASS
+segment.dti_band.3. 20-30.rate,0.1728409267143264,0.17284092671432646,5.551115123125783e-17,PASS
+segment.dti_band.4. 30-40.loans,51440.0,51440.0,0.0,PASS
+segment.dti_band.4. 30-40.rate,0.2061236391912908,0.20612363919129081,2.7755575615628914e-17,PASS
+segment.dti_band.5. 40+.loans,29.0,29.0,0.0,PASS
+segment.dti_band.5. 40+.rate,0.2758620689655172,0.27586206896551724,5.551115123125783e-17,PASS
+segment.employment_band.1. Under 1 year.loans,54939.0,54939.0,0.0,PASS
+segment.employment_band.1. Under 1 year.rate,0.1520595569631773,0.15205955696317736,5.551115123125783e-17,PASS
+segment.employment_band.2. 1-2 years.loans,105567.0,105567.0,0.0,PASS
+segment.employment_band.2. 1-2 years.rate,0.1474229636155238,0.1474229636155238,0.0,PASS
+segment.employment_band.3. 3-5 years.loans,138551.0,138551.0,0.0,PASS
+segment.employment_band.3. 3-5 years.rate,0.1469494987405359,0.14694949874053598,8.326672684688674e-17,PASS
+segment.employment_band.4. 6-9 years.loans,126017.0,126017.0,0.0,PASS
+segment.employment_band.4. 6-9 years.rate,0.1488449971035653,0.14884499710356539,8.326672684688674e-17,PASS
+segment.employment_band.5. 10+ years.loans,210876.0,210876.0,0.0,PASS
+segment.employment_band.5. 10+ years.rate,0.1371469489178474,0.13714694891784746,5.551115123125783e-17,PASS
+segment.employment_band.Missing.loans,37565.0,37565.0,0.0,PASS
+segment.employment_band.Missing.rate,0.2083854651936643,0.20838546519366433,2.7755575615628914e-17,PASS
+segment.fico_band.1. Under 660.loans,2.0,2.0,0.0,PASS
+segment.fico_band.1. Under 660.rate,0.0,0.0,0.0,PASS
+segment.fico_band.2. 660-679.loans,232055.0,232055.0,0.0,PASS
+segment.fico_band.2. 660-679.rate,0.190661696580552,0.19066169658055201,2.7755575615628914e-17,PASS
+segment.fico_band.3. 680-699.loans,184472.0,184472.0,0.0,PASS
+segment.fico_band.3. 680-699.rate,0.158918426644694,0.15891842664469405,5.551115123125783e-17,PASS
+segment.fico_band.4. 700-719.loans,122879.0,122879.0,0.0,PASS
+segment.fico_band.4. 700-719.rate,0.1239186516817356,0.12391865168173569,8.326672684688674e-17,PASS
+segment.fico_band.5. 720-759.loans,98369.0,98369.0,0.0,PASS
+segment.fico_band.5. 720-759.rate,0.0920411918388923,0.09204119183889234,4.163336342344337e-17,PASS
+segment.fico_band.6. 760+.loans,35738.0,35738.0,0.0,PASS
+segment.fico_band.6. 760+.rate,0.0543399182942526,0.054339918294252616,1.3877787807814457e-17,PASS
+segment.grade.A.loans,144113.0,144113.0,0.0,PASS
+segment.grade.A.rate,0.0549985081151596,0.05499850811515963,3.469446951953614e-17,PASS
+segment.grade.B.loans,219834.0,219834.0,0.0,PASS
+segment.grade.B.rate,0.1135629611434082,0.1135629611434082,0.0,PASS
+segment.grade.C.loans,179569.0,179569.0,0.0,PASS
+segment.grade.C.rate,0.1829046216217721,0.18290462162177212,2.7755575615628914e-17,PASS
+segment.grade.D.loans,86425.0,86425.0,0.0,PASS
+segment.grade.D.rate,0.2380561180214058,0.23805611802140583,2.7755575615628914e-17,PASS
+segment.grade.E.loans,31607.0,31607.0,0.0,PASS
+segment.grade.E.rate,0.2941120637833391,0.29411206378333915,5.551115123125783e-17,PASS
+segment.grade.F.loans,10102.0,10102.0,0.0,PASS
+segment.grade.F.rate,0.3443872500494951,0.34438725004949516,5.551115123125783e-17,PASS
+segment.grade.G.loans,1865.0,1865.0,0.0,PASS
+segment.grade.G.rate,0.374798927613941,0.374798927613941,0.0,PASS
+segment.home_ownership.ANY.loans,2.0,2.0,0.0,PASS
+segment.home_ownership.ANY.rate,0.0,0.0,0.0,PASS
+segment.home_ownership.MORTGAGE.loans,320785.0,320785.0,0.0,PASS
+segment.home_ownership.MORTGAGE.rate,0.1262029084901102,0.1262029084901102,0.0,PASS
+segment.home_ownership.NONE.loans,45.0,45.0,0.0,PASS
+segment.home_ownership.NONE.rate,0.1555555555555555,0.15555555555555556,5.551115123125783e-17,PASS
+segment.home_ownership.OTHER.loans,144.0,144.0,0.0,PASS
+segment.home_ownership.OTHER.rate,0.1875,0.1875,0.0,PASS
+segment.home_ownership.OWN.loans,66805.0,66805.0,0.0,PASS
+segment.home_ownership.OWN.rate,0.1548686475563206,0.15486864755632063,2.7755575615628914e-17,PASS
+segment.home_ownership.RENT.loans,285734.0,285734.0,0.0,PASS
+segment.home_ownership.RENT.rate,0.1712046868766055,0.1712046868766055,0.0,PASS
+segment.income_band.1. Under 40k.loans,122332.0,122332.0,0.0,PASS
+segment.income_band.1. Under 40k.rate,0.1928522381715332,0.1928522381715332,0.0,PASS
+segment.income_band.2. 40-60k.loans,186033.0,186033.0,0.0,PASS
+segment.income_band.2. 40-60k.rate,0.1617831244994167,0.16178312449941676,5.551115123125783e-17,PASS
+segment.income_band.3. 60-80k.loans,148962.0,148962.0,0.0,PASS
+segment.income_band.3. 60-80k.rate,0.1437883487063815,0.1437883487063815,0.0,PASS
+segment.income_band.4. 80-120k.loans,140064.0,140064.0,0.0,PASS
+segment.income_band.4. 80-120k.rate,0.1190812771304546,0.11908127713045465,4.163336342344337e-17,PASS
+segment.income_band.5. 120k+.loans,76124.0,76124.0,0.0,PASS
+segment.income_band.5. 120k+.rate,0.1050391466554568,0.10503914665545688,8.326672684688674e-17,PASS
+segment.loan_amount_band.1. Under 5k.loans,74618.0,74618.0,0.0,PASS
+segment.loan_amount_band.1. Under 5k.rate,0.1452598568709962,0.14525985687099627,5.551115123125783e-17,PASS
+segment.loan_amount_band.2. 5-10k.loans,196907.0,196907.0,0.0,PASS
+segment.loan_amount_band.2. 5-10k.rate,0.1495426775076559,0.1495426775076559,0.0,PASS
+segment.loan_amount_band.3. 10-15k.loans,156835.0,156835.0,0.0,PASS
+segment.loan_amount_band.3. 10-15k.rate,0.1439283323237797,0.14392833232377977,8.326672684688674e-17,PASS
+segment.loan_amount_band.4. 15-25k.loans,174312.0,174312.0,0.0,PASS
+segment.loan_amount_band.4. 15-25k.rate,0.1493873055211345,0.14938730552113452,2.7755575615628914e-17,PASS
+segment.loan_amount_band.5. 25k+.loans,70843.0,70843.0,0.0,PASS
+segment.loan_amount_band.5. 25k+.rate,0.1536496195813277,0.15364961958132772,2.7755575615628914e-17,PASS
+segment.purpose.car.loans,7785.0,7785.0,0.0,PASS
+segment.purpose.car.rate,0.1184328837508028,0.11843288375080283,2.7755575615628914e-17,PASS
+segment.purpose.credit_card.loans,159044.0,159044.0,0.0,PASS
+segment.purpose.credit_card.rate,0.1224189532456427,0.12241895324564271,1.3877787807814457e-17,PASS
+segment.purpose.debt_consolidation.loans,385905.0,385905.0,0.0,PASS
+segment.purpose.debt_consolidation.rate,0.1562146124046073,0.15621461240460735,5.551115123125783e-17,PASS
+segment.purpose.educational.loans,326.0,326.0,0.0,PASS
+segment.purpose.educational.rate,0.1717791411042944,0.17177914110429449,8.326672684688674e-17,PASS
+segment.purpose.home_improvement.loans,39094.0,39094.0,0.0,PASS
+segment.purpose.home_improvement.rate,0.1309152299585614,0.13091522995856142,2.7755575615628914e-17,PASS
+segment.purpose.house.loans,2990.0,2990.0,0.0,PASS
+segment.purpose.house.rate,0.1842809364548495,0.1842809364548495,0.0,PASS
+segment.purpose.major_purchase.loans,14075.0,14075.0,0.0,PASS
+segment.purpose.major_purchase.rate,0.1311545293072824,0.1311545293072824,0.0,PASS
+segment.purpose.medical.loans,7245.0,7245.0,0.0,PASS
+segment.purpose.medical.rate,0.1728088336783989,0.1728088336783989,0.0,PASS
+segment.purpose.moving.loans,4814.0,4814.0,0.0,PASS
+segment.purpose.moving.rate,0.1923556294142085,0.19235562941420856,5.551115123125783e-17,PASS
+segment.purpose.other.loans,36374.0,36374.0,0.0,PASS
+segment.purpose.other.rate,0.1695166877439929,0.16951668774399295,5.551115123125783e-17,PASS
+segment.purpose.renewable_energy.loans,512.0,512.0,0.0,PASS
+segment.purpose.renewable_energy.rate,0.201171875,0.201171875,0.0,PASS
+segment.purpose.small_business.loans,8635.0,8635.0,0.0,PASS
+segment.purpose.small_business.rate,0.2440069484655471,0.24400694846554719,8.326672684688674e-17,PASS
+segment.purpose.vacation.loans,4426.0,4426.0,0.0,PASS
+segment.purpose.vacation.rate,0.1590600994125621,0.15906009941256213,2.7755575615628914e-17,PASS
+segment.purpose.wedding.loans,2290.0,2290.0,0.0,PASS
+segment.purpose.wedding.rate,0.1213973799126637,0.12139737991266375,5.551115123125783e-17,PASS
+segment.term_label.36 months.loans,618549.0,618549.0,0.0,PASS
+segment.term_label.36 months.rate,0.1389590800405465,0.1389590800405465,0.0,PASS
+segment.term_label.60 months.loans,54966.0,54966.0,0.0,PASS
+segment.term_label.60 months.rate,0.2516100862351271,0.25161008623512715,5.551115123125783e-17,PASS
+segment.utilization_band.1. Under 20%.loans,60659.0,60659.0,0.0,PASS
+segment.utilization_band.1. Under 20%.rate,0.1100248932557411,0.11002489325574111,1.3877787807814457e-17,PASS
+segment.utilization_band.2. 20-40%.loans,135521.0,135521.0,0.0,PASS
+segment.utilization_band.2. 20-40%.rate,0.1301643287756141,0.13016432877561412,2.7755575615628914e-17,PASS
+segment.utilization_band.3. 40-60%.loans,189300.0,189300.0,0.0,PASS
+segment.utilization_band.3. 40-60%.rate,0.1483835182250396,0.14838351822503962,2.7755575615628914e-17,PASS
+segment.utilization_band.4. 60-80%.loans,177290.0,177290.0,0.0,PASS
+segment.utilization_band.4. 60-80%.rate,0.1604207795137909,0.16042077951379097,5.551115123125783e-17,PASS
+segment.utilization_band.5. 80-100%.loans,107903.0,107903.0,0.0,PASS
+segment.utilization_band.5. 80-100%.rate,0.1702918361862042,0.17029183618620428,8.326672684688674e-17,PASS
+segment.utilization_band.6. Over 100%.loans,2464.0,2464.0,0.0,PASS
+segment.utilization_band.6. Over 100%.rate,0.1972402597402597,0.19724025974025974,5.551115123125783e-17,PASS
+segment.utilization_band.Missing.loans,378.0,378.0,0.0,PASS
+segment.utilization_band.Missing.rate,0.2063492063492063,0.20634920634920634,2.7755575615628914e-17,PASS
+segment.verification_status.Not Verified.loans,218255.0,218255.0,0.0,PASS
+segment.verification_status.Not Verified.rate,0.1173581361251746,0.11735813612517468,8.326672684688674e-17,PASS
+segment.verification_status.Source Verified.loans,231928.0,231928.0,0.0,PASS
+segment.verification_status.Source Verified.rate,0.1488349832706702,0.1488349832706702,0.0,PASS
+segment.verification_status.Verified.loans,223332.0,223332.0,0.0,PASS
+segment.verification_status.Verified.rate,0.177538373363423,0.17753837336342307,5.551115123125783e-17,PASS
+vintage.2007.36m.loans,250.0,250.0,0.0,PASS
+vintage.2007.36m.rate,0.18,0.18,0.0,PASS
+vintage.2008.36m.loans,1562.0,1562.0,0.0,PASS
+vintage.2008.36m.rate,0.1581306017925736,0.15813060179257363,2.7755575615628914e-17,PASS
+vintage.2009.36m.loans,4716.0,4716.0,0.0,PASS
+vintage.2009.36m.rate,0.1259541984732824,0.12595419847328243,2.7755575615628914e-17,PASS
+vintage.2010.36m.loans,8466.0,8466.0,0.0,PASS
+vintage.2010.36m.rate,0.0994566501299314,0.09945665012993149,8.326672684688674e-17,PASS
+vintage.2010.60m.loans,3070.0,3070.0,0.0,PASS
+vintage.2010.60m.rate,0.2100977198697068,0.21009771986970685,5.551115123125783e-17,PASS
+vintage.2011.36m.loans,14101.0,14101.0,0.0,PASS
+vintage.2011.36m.rate,0.1063045174101127,0.10630451741011276,6.938893903907228e-17,PASS
+vintage.2011.60m.loans,7620.0,7620.0,0.0,PASS
+vintage.2011.60m.rate,0.2359580052493438,0.23595800524934382,2.7755575615628914e-17,PASS
+vintage.2012.36m.loans,43466.0,43466.0,0.0,PASS
+vintage.2012.36m.rate,0.1358072976579395,0.13580729765793953,2.7755575615628914e-17,PASS
+vintage.2012.60m.loans,9897.0,9897.0,0.0,PASS
+vintage.2012.60m.rate,0.2769526119025967,0.27695261190259673,5.551115123125783e-17,PASS
+vintage.2013.36m.loans,100416.0,100416.0,0.0,PASS
+vintage.2013.36m.rate,0.1232672084130019,0.12326720841300191,1.3877787807814457e-17,PASS
+vintage.2013.60m.loans,34379.0,34379.0,0.0,PASS
+vintage.2013.60m.rate,0.251490735623491,0.25149073562349106,5.551115123125783e-17,PASS
+vintage.2014.36m.loans,162565.0,162565.0,0.0,PASS
+vintage.2014.36m.rate,0.1372620182696152,0.13726201826961523,2.7755575615628914e-17,PASS
+vintage.2015.36m.loans,283007.0,283007.0,0.0,PASS
+vintage.2015.36m.rate,0.1488691092446476,0.14886910924464766,5.551115123125783e-17,PASS

@@ -1,0 +1,53 @@
+{
+  "cells_compared": 27,
+  "cells_matching": 27,
+  "chart_parts": [
+    "xl/charts/chart1.xml",
+    "xl/charts/chart2.xml"
+  ],
+  "conditional_format_sheets": [
+    "Executive Summary",
+    "Portfolio Segments",
+    "Strategy What-If",
+    "Data Quality"
+  ],
+  "data_validation_sheets": [
+    "Strategy What-If"
+  ],
+  "formula_count": 328,
+  "formula_errors": [],
+  "formulas_without_cached_value": 8,
+  "functions_used": [
+    "COUNTIFS",
+    "IFERROR",
+    "SUM",
+    "SUMIFS",
+    "XLOOKUP"
+  ],
+  "mismatches": [],
+  "opened_in_excel_desktop": false,
+  "path": "reports/excel/credit_risk_portfolio_report.xlsx",
+  "pivot": {
+    "pivot_created": true,
+    "pivot_output_columns": 12,
+    "pivot_output_rows": 20
+  },
+  "pivot_table_parts": [
+    "xl/pivotTables/pivotTable1.xml"
+  ],
+  "sheets": [
+    "Executive Summary",
+    "Portfolio Segments",
+    "Vintage Trends",
+    "Strategy What-If",
+    "Data Quality",
+    "Definitions",
+    "Pivot Grade by Year",
+    "Raw Export",
+    "Score Buckets"
+  ],
+  "table_parts": [
+    "xl/tables/table1.xml"
+  ],
+  "verified_engine": "LibreOffice recalculation, read back with openpyxl"
+}

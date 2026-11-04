@@ -1,0 +1,100 @@
+issue_year,term_label,status_group,loan_status,loans,loan_amount
+2007,36 months,resolved_bad,Charged Off,45,488400.0
+2007,36 months,excluded_policy,Does not meet the credit policy. Status:Charged Off,110,1053450.0
+2007,36 months,excluded_policy,Does not meet the credit policy. Status:Fully Paid,212,1587550.0
+2007,36 months,resolved_good,Fully Paid,205,1728875.0
+2008,36 months,resolved_bad,Charged Off,247,2739600.0
+2008,36 months,excluded_policy,Does not meet the credit policy. Status:Charged Off,249,2244850.0
+2008,36 months,excluded_policy,Does not meet the credit policy. Status:Fully Paid,582,4484125.0
+2008,36 months,resolved_good,Fully Paid,1315,11650675.0
+2009,36 months,resolved_bad,Charged Off,594,6256475.0
+2009,36 months,excluded_policy,Does not meet the credit policy. Status:Charged Off,129,1371600.0
+2009,36 months,excluded_policy,Does not meet the credit policy. Status:Fully Paid,436,4120325.0
+2009,36 months,resolved_good,Fully Paid,4122,40179850.0
+2010,36 months,resolved_bad,Charged Off,842,8143075.0
+2010,36 months,excluded_policy,Does not meet the credit policy. Status:Charged Off,158,1413050.0
+2010,36 months,excluded_policy,Does not meet the credit policy. Status:Fully Paid,532,5105100.0
+2010,36 months,resolved_good,Fully Paid,7624,75079675.0
+2010,60 months,resolved_bad,Charged Off,645,7888125.0
+2010,60 months,excluded_policy,Does not meet the credit policy. Status:Charged Off,112,1156900.0
+2010,60 months,excluded_policy,Does not meet the credit policy. Status:Fully Paid,199,2196300.0
+2010,60 months,resolved_good,Fully Paid,2425,31010325.0
+2011,36 months,resolved_bad,Charged Off,1499,12669850.0
+2011,36 months,resolved_good,Fully Paid,12602,120177600.0
+2011,60 months,resolved_bad,Charged Off,1798,30690750.0
+2011,60 months,resolved_good,Fully Paid,5822,98145625.0
+2012,36 months,resolved_bad,Charged Off,5903,68285825.0
+2012,36 months,resolved_good,Fully Paid,37563,439467775.0
+2012,60 months,resolved_bad,Charged Off,2741,58957100.0
+2012,60 months,resolved_good,Fully Paid,7156,151654800.0
+2013,36 months,resolved_bad,Charged Off,12378,150254225.0
+2013,36 months,resolved_good,Fully Paid,88038,1121779925.0
+2013,60 months,resolved_bad,Charged Off,8646,179615400.0
+2013,60 months,open_performing,Current,6,103275.0
+2013,60 months,resolved_good,Fully Paid,25733,530848975.0
+2013,60 months,open_delinquent,In Grace Period,1,10000.0
+2013,60 months,open_delinquent,Late (31-120 days),3,39000.0
+2014,36 months,resolved_bad,Charged Off,22314,270880750.0
+2014,36 months,resolved_good,Fully Paid,140251,1775104975.0
+2014,60 months,resolved_bad,Charged Off,18846,370092625.0
+2014,60 months,open_performing,Current,11919,238392250.0
+2014,60 months,resolved_bad,Default,1,12000.0
+2014,60 months,resolved_good,Fully Paid,41680,837197525.0
+2014,60 months,open_delinquent,In Grace Period,200,4124950.0
+2014,60 months,open_delinquent,Late (16-30 days),72,1543150.0
+2014,60 months,open_delinquent,Late (31-120 days),334,6265325.0
+2015,36 months,resolved_bad,Charged Off,42131,524457275.0
+2015,36 months,open_performing,Current,72,1025400.0
+2015,36 months,resolved_good,Fully Paid,240876,3099628225.0
+2015,36 months,open_delinquent,In Grace Period,9,166075.0
+2015,36 months,open_delinquent,Late (16-30 days),5,90200.0
+2015,36 months,open_delinquent,Late (31-120 days),61,878625.0
+2015,60 months,resolved_bad,Charged Off,33671,667636325.0
+2015,60 months,open_performing,Current,43221,872917025.0
+2015,60 months,resolved_bad,Default,1,35000.0
+2015,60 months,resolved_good,Fully Paid,58841,1206514350.0
+2015,60 months,open_delinquent,In Grace Period,603,12198725.0
+2015,60 months,open_delinquent,Late (16-30 days),274,5563000.0
+2015,60 months,open_delinquent,Late (31-120 days),1298,26039850.0
+2016,36 months,resolved_bad,Charged Off,46089,600148225.0
+2016,36 months,open_performing,Current,86578,1070334200.0
+2016,36 months,resolved_bad,Default,8,88625.0
+2016,36 months,resolved_good,Fully Paid,186176,2396180225.0
+2016,36 months,open_delinquent,In Grace Period,1096,15560400.0
+2016,36 months,open_delinquent,Late (16-30 days),584,8301475.0
+2016,36 months,open_delinquent,Late (31-120 days),2829,37318300.0
+2016,60 months,resolved_bad,Charged Off,22119,450406025.0
+2016,60 months,open_performing,Current,47405,970529350.0
+2016,60 months,resolved_bad,Default,2,27825.0
+2016,60 months,resolved_good,Fully Paid,38588,791278925.0
+2016,60 months,open_delinquent,In Grace Period,697,14907275.0
+2016,60 months,open_delinquent,Late (16-30 days),318,6647975.0
+2016,60 months,open_delinquent,Late (31-120 days),1713,34988675.0
+2017,36 months,resolved_bad,Charged Off,25659,335969250.0
+2017,36 months,open_performing,Current,183490,2305505200.0
+2017,36 months,resolved_bad,Default,13,161275.0
+2017,36 months,resolved_good,Fully Paid,102601,1231184625.0
+2017,36 months,open_delinquent,In Grace Period,1849,26420375.0
+2017,36 months,open_delinquent,Late (16-30 days),956,13775650.0
+2017,36 months,open_delinquent,Late (31-120 days),5089,68700200.0
+2017,60 months,resolved_bad,Charged Off,13368,280379025.0
+2017,60 months,open_performing,Current,77519,1634888300.0
+2017,60 months,resolved_bad,Default,8,156800.0
+2017,60 months,resolved_good,Fully Paid,27204,564709025.0
+2017,60 months,open_delinquent,In Grace Period,1044,23209900.0
+2017,60 months,open_delinquent,Late (16-30 days),532,11549750.0
+2017,60 months,open_delinquent,Late (31-120 days),2887,61875250.0
+2018,36 months,resolved_bad,Charged Off,5434,74740375.0
+2018,36 months,open_performing,Current,294721,3999360950.0
+2018,36 months,resolved_bad,Default,4,42500.0
+2018,36 months,resolved_good,Fully Paid,35662,431429975.0
+2018,36 months,open_delinquent,In Grace Period,1863,27852525.0
+2018,36 months,open_delinquent,Late (16-30 days),993,14254550.0
+2018,36 months,open_delinquent,Late (31-120 days),4456,65282025.0
+2018,60 months,resolved_bad,Charged Off,3378,75081150.0
+2018,60 months,open_performing,Current,130153,2844472975.0
+2018,60 months,resolved_bad,Default,3,50000.0
+2018,60 months,resolved_good,Fully Paid,11528,250839825.0
+2018,60 months,open_delinquent,In Grace Period,1036,23811600.0
+2018,60 months,open_delinquent,Late (16-30 days),602,13697400.0
+2018,60 months,open_delinquent,Late (31-120 days),2716,60737000.0

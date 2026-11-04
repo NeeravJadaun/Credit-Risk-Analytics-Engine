@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!-- Single-machine, pseudo-distributed HDFS: a real NameNode and DataNode on loopback. Not a cluster. -->
+<configuration>
+  <property><name>fs.defaultFS</name><value>hdfs://127.0.0.1:19000</value></property>
+</configuration>

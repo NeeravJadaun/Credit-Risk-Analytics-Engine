@@ -1,0 +1,93 @@
+batch_id,rule,metric,value,warn_level,critical_level,severity,simulation,provenance,evidence,simulated_date,scenario
+2015-Q1,field_null_share,max_field_null_share,0.000459648192345,0.01,0.05,OK,False,Real data: 2015-Q1 vintage vs 2014 reference,Real,,
+2015-Q1,default_rate_deviation,default_rate_abs_deviation,0.0110805964214481,0.01,0.03,WARN,False,Real data: 2015-Q1 vintage vs 2014 reference,Real,,
+2015-Q1,score_psi,score_psi,0.0064491390369474,0.1,0.25,OK,False,Real data: 2015-Q1 vintage vs 2014 reference,Real,,
+2015-Q1,auc_drop,auc_drop,-0.002728996865223,0.02,0.05,OK,False,Real data: 2015-Q1 vintage vs 2014 reference,Real,,
+2015-Q1,calibration_gap,calibration_abs_gap,0.0243201106302175,0.01,0.03,WARN,False,Real data: 2015-Q1 vintage vs 2014 reference,Real,,
+2015-Q2,field_null_share,max_field_null_share,0.0003425724073497,0.01,0.05,OK,False,Real data: 2015-Q2 vintage vs 2014 reference,Real,,
+2015-Q2,default_rate_deviation,default_rate_abs_deviation,0.0165529926304159,0.01,0.03,WARN,False,Real data: 2015-Q2 vintage vs 2014 reference,Real,,
+2015-Q2,score_psi,score_psi,0.0102724931332676,0.1,0.25,OK,False,Real data: 2015-Q2 vintage vs 2014 reference,Real,,
+2015-Q2,auc_drop,auc_drop,-0.0044965986156979,0.02,0.05,OK,False,Real data: 2015-Q2 vintage vs 2014 reference,Real,,
+2015-Q2,calibration_gap,calibration_abs_gap,0.0306002158562129,0.01,0.03,CRITICAL,False,Real data: 2015-Q2 vintage vs 2014 reference,Real,,
+2015-Q3,field_null_share,max_field_null_share,0.0005437442227176,0.01,0.05,OK,False,Real data: 2015-Q3 vintage vs 2014 reference,Real,,
+2015-Q3,default_rate_deviation,default_rate_abs_deviation,0.0085294014465502,0.01,0.03,OK,False,Real data: 2015-Q3 vintage vs 2014 reference,Real,,
+2015-Q3,score_psi,score_psi,0.0148688987732426,0.1,0.25,OK,False,Real data: 2015-Q3 vintage vs 2014 reference,Real,,
+2015-Q3,auc_drop,auc_drop,-0.0117292752540513,0.02,0.05,OK,False,Real data: 2015-Q3 vintage vs 2014 reference,Real,,
+2015-Q3,calibration_gap,calibration_abs_gap,0.0262316954577946,0.01,0.03,WARN,False,Real data: 2015-Q3 vintage vs 2014 reference,Real,,
+2015-Q4,field_null_share,max_field_null_share,0.0004286133231067,0.01,0.05,OK,False,Real data: 2015-Q4 vintage vs 2014 reference,Real,,
+2015-Q4,default_rate_deviation,default_rate_abs_deviation,0.0109141192475857,0.01,0.03,WARN,False,Real data: 2015-Q4 vintage vs 2014 reference,Real,,
+2015-Q4,score_psi,score_psi,0.0288854817347464,0.1,0.25,OK,False,Real data: 2015-Q4 vintage vs 2014 reference,Real,,
+2015-Q4,auc_drop,auc_drop,-0.0095105148255656,0.02,0.05,OK,False,Real data: 2015-Q4 vintage vs 2014 reference,Real,,
+2015-Q4,calibration_gap,calibration_abs_gap,0.0324829023092581,0.01,0.03,CRITICAL,False,Real data: 2015-Q4 vintage vs 2014 reference,Real,,
+SIM-01,field_null_share,max_field_null_share,0.0002968113975576,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-01-31,clean_partition
+SIM-01,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-01-31,clean_partition
+SIM-01,default_rate_deviation,default_rate_abs_deviation,0.0019958839710918,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-01-31,clean_partition
+SIM-01,score_psi,score_psi,0.0002492537383682,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-01-31,clean_partition
+SIM-01,auc_drop,auc_drop,0.0005360918087018,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-01-31,clean_partition
+SIM-01,calibration_gap,calibration_abs_gap,0.0017346346085469,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-01-31,clean_partition
+SIM-02,field_null_share,max_field_null_share,0.0003816146540027,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-02-28,clean_partition
+SIM-02,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-02-28,clean_partition
+SIM-02,default_rate_deviation,default_rate_abs_deviation,0.0009782448937512,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-02-28,clean_partition
+SIM-02,score_psi,score_psi,0.0003570139019938,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-02-28,clean_partition
+SIM-02,auc_drop,auc_drop,0.0056543431142525,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-02-28,clean_partition
+SIM-02,calibration_gap,calibration_abs_gap,0.0007862595108634,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-02-28,clean_partition
+SIM-03,field_null_share,max_field_null_share,0.0003392130257801,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-03-31,clean_partition
+SIM-03,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-03-31,clean_partition
+SIM-03,default_rate_deviation,default_rate_abs_deviation,0.0011418365173749,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-03-31,clean_partition
+SIM-03,score_psi,score_psi,0.0001944956428671,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-03-31,clean_partition
+SIM-03,auc_drop,auc_drop,-0.0036805435591091,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-03-31,clean_partition
+SIM-03,calibration_gap,calibration_abs_gap,0.0010632116236996,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-03-31,clean_partition
+SIM-04,field_null_share,max_field_null_share,0.0003816146540027,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-04-30,clean_partition
+SIM-04,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-04-30,clean_partition
+SIM-04,default_rate_deviation,default_rate_abs_deviation,0.0003786072093694,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-04-30,clean_partition
+SIM-04,score_psi,score_psi,0.0002102283129159,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-04-30,clean_partition
+SIM-04,auc_drop,auc_drop,-0.0005644487255289,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-04-30,clean_partition
+SIM-04,calibration_gap,calibration_abs_gap,0.0001522360176704,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-04-30,clean_partition
+SIM-05,field_null_share,max_field_null_share,0.0004240162822252,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-05-31,clean_partition
+SIM-05,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-05-31,clean_partition
+SIM-05,default_rate_deviation,default_rate_abs_deviation,0.0013538446584875,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-05-31,clean_partition
+SIM-05,score_psi,score_psi,0.0003839481486829,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-05-31,clean_partition
+SIM-05,auc_drop,auc_drop,0.0040414554301768,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-05-31,clean_partition
+SIM-05,calibration_gap,calibration_abs_gap,0.0014339584469868,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-05-31,clean_partition
+SIM-06,field_null_share,max_field_null_share,0.0006784260515603,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-06-30,clean_partition
+SIM-06,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-06-30,clean_partition
+SIM-06,default_rate_deviation,default_rate_abs_deviation,0.0017414742017566,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-06-30,clean_partition
+SIM-06,score_psi,score_psi,0.0004781507537305,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-06-30,clean_partition
+SIM-06,auc_drop,auc_drop,-0.0002959557561009,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-06-30,clean_partition
+SIM-06,calibration_gap,calibration_abs_gap,0.0020797971532281,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-06-30,clean_partition
+SIM-07,field_null_share,max_field_null_share,0.0005088195386702,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-07-31,clean_partition
+SIM-07,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-07-31,clean_partition
+SIM-07,default_rate_deviation,default_rate_abs_deviation,0.0007662367526386,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-07-31,clean_partition
+SIM-07,score_psi,score_psi,0.0002073879569992,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-07-31,clean_partition
+SIM-07,auc_drop,auc_drop,0.0037778503955994,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-07-31,clean_partition
+SIM-07,calibration_gap,calibration_abs_gap,0.000525198683062,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-07-31,clean_partition
+SIM-08,field_null_share,max_field_null_share,0.0004240162822252,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-08-31,clean_partition
+SIM-08,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-08-31,clean_partition
+SIM-08,default_rate_deviation,default_rate_abs_deviation,0.0028379016462758,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-08-31,clean_partition
+SIM-08,score_psi,score_psi,0.0002441126528761,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-08-31,clean_partition
+SIM-08,auc_drop,auc_drop,-0.0067120685131975,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-08-31,clean_partition
+SIM-08,calibration_gap,calibration_abs_gap,0.0028582501483573,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-08-31,clean_partition
+SIM-09,field_null_share,max_field_null_share,0.000451080337408,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-09-30,injected_row_loss
+SIM-09,row_count_reconciliation,row_count_gap_share,0.0599983039348711,0.001,0.02,CRITICAL,True,Simulation — not observed portfolio history.,Simulation,2026-09-30,injected_row_loss
+SIM-09,default_rate_deviation,default_rate_abs_deviation,0.0004636782373852,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-09-30,injected_row_loss
+SIM-09,score_psi,score_psi,0.0002747937848207,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-09-30,injected_row_loss
+SIM-09,auc_drop,auc_drop,-0.0044852501941611,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-09-30,injected_row_loss
+SIM-09,calibration_gap,calibration_abs_gap,0.0006469339031489,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-09-30,injected_row_loss
+SIM-10,field_null_share,max_field_null_share,0.0800118724559023,0.01,0.05,CRITICAL,True,Simulation — not observed portfolio history.,Simulation,2026-10-31,injected_null_spike
+SIM-10,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-10-31,injected_null_spike
+SIM-10,default_rate_deviation,default_rate_abs_deviation,0.0045339667751768,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-10-31,injected_null_spike
+SIM-10,score_psi,score_psi,0.000207021028949,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-10-31,injected_null_spike
+SIM-10,auc_drop,auc_drop,-0.0101083118688556,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-10-31,injected_null_spike
+SIM-10,calibration_gap,calibration_abs_gap,0.0038480953619473,0.01,0.03,OK,True,Simulation — not observed portfolio history.,Simulation,2026-10-31,injected_null_spike
+SIM-11,field_null_share,max_field_null_share,0.0008056309362279,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-11-30,injected_mix_shift
+SIM-11,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-11-30,injected_mix_shift
+SIM-11,default_rate_deviation,default_rate_abs_deviation,0.046220782207184,0.01,0.03,CRITICAL,True,Simulation — not observed portfolio history.,Simulation,2026-11-30,injected_mix_shift
+SIM-11,score_psi,score_psi,0.2069320914259153,0.1,0.25,WARN,True,Simulation — not observed portfolio history.,Simulation,2026-11-30,injected_mix_shift
+SIM-11,auc_drop,auc_drop,0.0108250186157882,0.02,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-11-30,injected_mix_shift
+SIM-11,calibration_gap,calibration_abs_gap,0.0110219022090126,0.01,0.03,WARN,True,Simulation — not observed portfolio history.,Simulation,2026-11-30,injected_mix_shift
+SIM-12,field_null_share,max_field_null_share,0.0003816308357715,0.01,0.05,OK,True,Simulation — not observed portfolio history.,Simulation,2026-12-31,injected_outcome_deterioration
+SIM-12,row_count_reconciliation,row_count_gap_share,0.0,0.001,0.02,OK,True,Simulation — not observed portfolio history.,Simulation,2026-12-31,injected_outcome_deterioration
+SIM-12,default_rate_deviation,default_rate_abs_deviation,0.0887596911624252,0.01,0.03,CRITICAL,True,Simulation — not observed portfolio history.,Simulation,2026-12-31,injected_outcome_deterioration
+SIM-12,score_psi,score_psi,0.0004050845422016,0.1,0.25,OK,True,Simulation — not observed portfolio history.,Simulation,2026-12-31,injected_outcome_deterioration
+SIM-12,auc_drop,auc_drop,0.0681351463031307,0.02,0.05,CRITICAL,True,Simulation — not observed portfolio history.,Simulation,2026-12-31,injected_outcome_deterioration
+SIM-12,calibration_gap,calibration_abs_gap,0.0889191027534331,0.01,0.03,CRITICAL,True,Simulation — not observed portfolio history.,Simulation,2026-12-31,injected_outcome_deterioration

@@ -1,0 +1,13 @@
+kpi_id,indicator,population,value,basis,note,evidence_type,provenance
+K01,Observed default rate,Matured loans,0.1481526023919289,99783 of 673515,95% CI 14.73% to 14.90%,real_source,Real: public LendingClub data
+K02,"Default-rate change, 2015 vs 2014 vintage",36-month matured loans,0.0116070909750324,283007 and 162565 loans,"Same term, both fully matured",real_source,Real: public LendingClub data
+K03,Delinquent share of open loans,All open loans at data cut,0.0375273315999489,34120 of 909204,"One snapshot, not a roll rate",real_source,Real: public LendingClub data
+K04,"Grade D-G share of volume, 2015",36-month matured loans,0.1545968827626171,43752 of 283007,2014 was 18.3%,real_source,Real: public LendingClub data
+K05,"FICO under 680 share, 2015",36-month matured loans,0.3764076506941524,106526 of 283007,2014 was 38.9%,real_source,Real: public LendingClub data
+K06,"Mean debt-to-income, 2015",36-month matured loans,18.468170433946863,283007 loans,2014 was 17.55,real_source,Real: public LendingClub data
+K07,Out-of-time ROC-AUC,"2015 vintage, unseen",0.6849603649865666,283007 loans,95% bootstrap CI 0.6826 to 0.6876,real_source,Real: public LendingClub data
+K08,Calibration gap (mean score minus observed),"2015 vintage, unseen",-0.0287992541445111,283007 loans,Negative means the model under-predicts,real_source,Real: public LendingClub data
+K09,"Score PSI, 2015 vs 2014",36-month matured loans,0.013925057152236,283007 vs 162565 loans,PSI cut-offs are a heuristic,real_source,Real: public LendingClub data
+K10,Default capture in top score decile,"2015 vintage, unseen",0.2093707721155443,8821 of 42131,"Retrospective, not causal",real_source,Real: public LendingClub data
+K11,"Layered-risk watchlist share, 2015","FICO under 680, DTI 20+, utilization 60%+",0.0846728172801379,23963 of 283007,Observed default rate 22.8%,real_source,Real: public LendingClub data
+K12,Data quarantine rate,All input rows,0.0019370098035963,4379 of 2260701,Includes 33 footer rows,real_source,Real: public LendingClub data

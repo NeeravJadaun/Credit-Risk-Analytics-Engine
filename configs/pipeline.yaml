@@ -1,0 +1,47 @@
+# Central pipeline settings. Paths are relative to the repository root.
+project_label: "Independent educational credit-risk project on public LendingClub data. Not a bank system."
+processing_version: "1.0.0"
+seed: 42
+source:
+  path: data/raw/accepted_2007_to_2018Q4.csv.gz
+  expected_sha256: 55c16f75120f897683f02e7aabcf080d0e4a20c4832feb1d592cfa941bd62a2d
+  expected_data_rows: 2260701
+hdfs:
+  uri: hdfs://127.0.0.1:19000
+  base: /credit_risk
+spark:
+  master: local[4]
+  driver_memory: 5g
+  shuffle_partitions: 16
+paths:
+  silver: data/silver
+  gold: data/gold
+  models: data/models
+  results: results
+  figures: dashboards/screenshots
+  plotly: dashboards/plotly
+  tableau: data/gold/tableau
+# A cohort is "matured" when every loan's contractual term ended before the data cut (early 2019).
+# Recent vintages are excluded from outcome analysis because only fast outcomes have resolved yet.
+cohort:
+  max_issue_year_36m: 2015
+  max_issue_year_60m: 2013
+split:   # time-based: train on older vintages, score later ones
+  train_max_issue_year: 2013
+  validation_issue_year: 2014
+  test_issue_year: 2015
+modeling:
+  bootstrap_iterations: 200
+  aspirational_auc: 0.82   # recorded for comparison only. Never used to choose or tune anything.
+simulation:
+  n_batches: 12
+  first_batch_date: "2026-01-31"
+  row_loss_batch: 9
+  row_loss_share: 0.06
+  null_spike_batch: 10
+  null_spike_field: dti
+  null_spike_share: 0.08
+  mix_shift_batch: 11
+  mix_shift_high_risk_share: 0.45
+  outcome_shift_batch: 12
+  outcome_shift_flip_share: 0.10

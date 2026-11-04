@@ -1,0 +1,20 @@
+# Which source columns may reach a model. Basis: is the value known at the original credit decision?
+numeric_features: [log_loan_amnt, int_rate, log_installment, fico_mid, dti, log_annual_inc, loan_to_income,
+  installment_to_income, credit_age_months, emp_years, delinq_2yrs, inq_last_6mths, open_acc, pub_rec,
+  log_revol_bal, revol_util, total_acc, mort_acc, pub_rec_bankruptcies, sub_grade_rank]
+categorical_features: [term_label, home_ownership, verification_status, purpose, application_type]
+# LendingClub's own risk pricing. It is known at decision, but the ablation model drops it to show
+# how much of the signal comes from LendingClub's internal assessment.
+lc_pricing_features: [int_rate, log_installment, sub_grade_rank]
+# Unknown at the credit decision: using any of these is target leakage.
+post_origination_columns: [loan_status, out_prncp, out_prncp_inv, total_pymnt, total_pymnt_inv, total_rec_prncp,
+  total_rec_int, total_rec_late_fee, recoveries, collection_recovery_fee, last_pymnt_d, last_pymnt_amnt,
+  next_pymnt_d, last_credit_pull_d, last_fico_range_high, last_fico_range_low, funded_amnt_inv, pymnt_plan,
+  hardship_flag, hardship_type, hardship_reason, hardship_status, deferral_term, hardship_amount,
+  hardship_start_date, hardship_end_date, payment_plan_start_date, hardship_length, hardship_dpd,
+  hardship_loan_status, orig_projected_additional_accrued_interest, hardship_payoff_balance_amount,
+  hardship_last_payment_amount, disbursement_method, debt_settlement_flag, debt_settlement_flag_date,
+  settlement_status, settlement_date, settlement_amount, settlement_percentage, settlement_term]
+# Excluded by judgement: geographic or free-text proxies with fair-lending risk, and identifiers.
+excluded_by_design: [zip_code, addr_state, emp_title, title, desc, url, id, member_id]
+identifier_and_outcome_columns: [loan_id, default_flag, split, score, issue_date, issue_year]

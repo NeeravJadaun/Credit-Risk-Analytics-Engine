@@ -1,0 +1,36 @@
+{
+  "finished_at": "2026-11-04T00:32:14Z",
+  "git": {
+    "commit": "4636006aa3cc2c4591679601935c1c60b25be92f",
+    "dirty": true
+  },
+  "machine": {
+    "cpu_count": 10,
+    "machine": "arm64",
+    "memory_gb": 16.0,
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "python": "3.11.17"
+  },
+  "matches_previous_run": true,
+  "metrics_fingerprint": "ae2529968b66bddf7b62133cc76ecc23451a739c2f242e2550c53656602e248d",
+  "period": "2026-11",
+  "previous_run_fingerprint": "ae2529968b66bddf7b62133cc76ecc23451a739c2f242e2550c53656602e248d",
+  "processing_version": "1.0.0",
+  "seconds_by_stage": {
+    "analysis_models_findings_monitoring": 39.62135454197414,
+    "benchmarks": 20.174643374979496,
+    "charts": 3.226167125045322,
+    "excel_workbook": 3.663653790950775,
+    "hdfs_ingest": 4.005036458023824,
+    "pandas_reconcile": 23.346222458058037,
+    "r_cross_check": 1.8047730840044096,
+    "reports": 0.008184791076928377,
+    "spark_etl": 26.75314233393874,
+    "tableau_extracts": 0.5409625840838999,
+    "warehouse_load_and_reconcile": 54.700260416953824
+  },
+  "seed": 42,
+  "source_sha256": "55c16f75120f897683f02e7aabcf080d0e4a20c4832feb1d592cfa941bd62a2d",
+  "status": "PUBLISHED",
+  "total_seconds": 177.8481491249986
+}

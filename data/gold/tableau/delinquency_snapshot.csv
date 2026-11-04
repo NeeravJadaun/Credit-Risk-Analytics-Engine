@@ -1,0 +1,13 @@
+issue_year,loans,open_performing,open_delinquent,charged_off_or_default,delinquent_share_of_open,provenance
+2007,572,0,0,45,,"Real: public LendingClub data, one snapshot at the data cut"
+2008,2393,0,0,247,,"Real: public LendingClub data, one snapshot at the data cut"
+2009,5281,0,0,594,,"Real: public LendingClub data, one snapshot at the data cut"
+2010,12537,0,0,1487,,"Real: public LendingClub data, one snapshot at the data cut"
+2011,21721,0,0,3297,,"Real: public LendingClub data, one snapshot at the data cut"
+2012,53363,0,0,8644,,"Real: public LendingClub data, one snapshot at the data cut"
+2013,134805,6,4,21024,0.4,"Real: public LendingClub data, one snapshot at the data cut"
+2014,235617,11919,606,41161,0.0483832335,"Real: public LendingClub data, one snapshot at the data cut"
+2015,421063,43293,2250,75803,0.0494038601,"Real: public LendingClub data, one snapshot at the data cut"
+2016,434202,133983,7237,68218,0.0512462824,"Real: public LendingClub data, one snapshot at the data cut"
+2017,442219,261009,12357,39048,0.0452031343,"Real: public LendingClub data, one snapshot at the data cut"
+2018,492549,424874,11666,8819,0.0267237825,"Real: public LendingClub data, one snapshot at the data cut"

@@ -1,0 +1,13 @@
+kpi_id,indicator,population,value,basis,note,evidence_type
+K01,Observed default rate,Matured loans,0.1481526023919289,99783 of 673515,95% CI 14.73% to 14.90%,real_source
+K02,"Default-rate change, 2015 vs 2014 vintage",36-month matured loans,0.01160709097503243,283007 and 162565 loans,"Same term, both fully matured",real_source
+K03,Delinquent share of open loans,All open loans at data cut,0.03752733159994897,34120 of 909204,"One snapshot, not a roll rate",real_source
+K04,"Grade D-G share of volume, 2015",36-month matured loans,0.15459688276261718,43752 of 283007,2014 was 18.3%,real_source
+K05,"FICO under 680 share, 2015",36-month matured loans,0.37640765069415244,106526 of 283007,2014 was 38.9%,real_source
+K06,"Mean debt-to-income, 2015",36-month matured loans,18.468170433946863,283007 loans,2014 was 17.55,real_source
+K07,Out-of-time ROC-AUC,"2015 vintage, unseen",0.6849603649865666,283007 loans,95% bootstrap CI 0.6826 to 0.6876,real_source
+K08,Calibration gap (mean score minus observed),"2015 vintage, unseen",-0.02879925414451115,283007 loans,Negative means the model under-predicts,real_source
+K09,"Score PSI, 2015 vs 2014",36-month matured loans,0.013925057152236017,283007 vs 162565 loans,PSI cut-offs are a heuristic,real_source
+K10,Default capture in top score decile,"2015 vintage, unseen",0.20937077211554436,8821 of 42131,"Retrospective, not causal",real_source
+K11,"Layered-risk watchlist share, 2015","FICO under 680, DTI 20+, utilization 60%+",0.08467281728013795,23963 of 283007,Observed default rate 22.8%,real_source
+K12,Data quarantine rate,All input rows,0.0019370098035963181,4379 of 2260701,Includes 33 footer rows,real_source

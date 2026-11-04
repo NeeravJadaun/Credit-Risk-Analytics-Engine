@@ -1,0 +1,70 @@
+{
+  "index_benchmark": {
+    "median_seconds_with_index": 0.011457209009677172,
+    "median_seconds_without_index": 0.16635204199701548,
+    "parallel_workers": 0,
+    "plan_with_index": "HashAggregate  (cost=12843.39..12845.89 rows=200 width=48)\n  Group Key: p.grade\n  ->  Hash Join  (cost=44.41..12642.88 rows=26735 width=10)\n        Hash Cond: (f.product_key = p.product_key)\n        ->  Index Scan using idx_loan_date on fact_loan f  (cost=0.43..12528.52 rows=26735 width=6)\n              Index Cond: ((date_key >= 201501) AND (date_key <= 201503))\n              Filter: is_matured_cohort\n        ->  Hash  (cost=25.10..25.10 rows=1510 width=12)\n              ->  Seq Scan on dim_product p  (cost=0.00..25.10 rows=1510 width=12)",
+    "plan_without_index": "HashAggregate  (cost=74883.08..74885.58 rows=200 width=48)\n  Group Key: p.grade\n  ->  Nested Loop  (cost=0.16..74683.39 rows=26625 width=10)\n        ->  Seq Scan on fact_loan f  (cost=0.00..74005.85 rows=26625 width=6)\n              Filter: (is_matured_cohort AND (date_key >= 201501) AND (date_key <= 201503))\n        ->  Memoize  (cost=0.16..0.18 rows=1 width=12)\n              Cache Key: f.product_key\n              Cache Mode: logical\n              ->  Index Scan using dim_product_pkey on dim_product p  (cost=0.15..0.17 rows=1 width=12)\n                    Index Cond: (product_key = f.product_key)",
+    "query": "SELECT p.grade, COUNT(*), AVG(f.default_flag) FROM credit_risk.fact_loan f JOIN credit_risk.dim_product p USING (product_key) WHERE f.is_matured_cohort AND f.date_key BETWEEN 201501 AND 201503 GROUP BY p.grade",
+    "repeats": 5,
+    "speedup_factor": 14.519421078598509
+  },
+  "integrity_checks": [
+    {
+      "check_name": "fact_rows_match_accepted",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "check_name": "loan_ids_not_null_and_unique",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "check_name": "star_join_does_not_fan_out",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "check_name": "default_flag_set_only_when_resolved",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "check_name": "cohort_loans_all_labelled",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "check_name": "splits_do_not_overlap_in_time",
+      "status": "PASS",
+      "violations": 0
+    },
+    {
+      "check_name": "scores_only_on_heldout_loans",
+      "status": "PASS",
+      "violations": 0
+    }
+  ],
+  "integrity_failed": 0,
+  "max_abs_difference": 8.326672684688674e-17,
+  "seconds": 54.69973258394748,
+  "sql_spark_values_compared": 158,
+  "sql_spark_values_matching": 158,
+  "storage_size": "558 MB",
+  "table_rows": {
+    "dim_borrower_profile": 156662,
+    "dim_date": 139,
+    "dim_geography": 51,
+    "dim_ingestion_batch": 1,
+    "dim_loan_status": 9,
+    "dim_model_version": 1,
+    "dim_product": 70,
+    "dim_purpose": 14,
+    "fact_data_quality_check": 32,
+    "fact_loan": 2256322,
+    "fact_model_metric": 255,
+    "fact_model_score": 445572,
+    "fact_monitoring_result": 92
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<configuration>
+  <property><name>dfs.replication</name><value>1</value></property>
+  <property><name>dfs.namenode.http-address</name><value>127.0.0.1:19870</value></property>
+  <property><name>dfs.datanode.address</name><value>127.0.0.1:19866</value></property>
+  <property><name>dfs.datanode.http.address</name><value>127.0.0.1:19864</value></property>
+  <property><name>dfs.datanode.ipc.address</name><value>127.0.0.1:19867</value></property>
+  <property><name>dfs.namenode.secondary.http-address</name><value>127.0.0.1:19868</value></property>
+</configuration>

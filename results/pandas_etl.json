@@ -1,0 +1,89 @@
+{
+  "accepted_rows": 2256322,
+  "compared_values": 62,
+  "counts": {
+    "Q01_non_loan_row": 33,
+    "Q02_duplicate_id": 0,
+    "Q03_missing_status": 0,
+    "Q04_invalid_issue_date": 0,
+    "Q05_invalid_loan_amount": 0,
+    "Q06_funded_above_requested": 0,
+    "Q07_invalid_term": 0,
+    "Q08_invalid_interest_rate": 0,
+    "Q09_installment_below_principal": 85,
+    "Q10_invalid_grade": 0,
+    "Q11_subgrade_grade_mismatch": 0,
+    "Q12_invalid_annual_income": 1671,
+    "Q13_invalid_dti": 2563,
+    "Q14_invalid_fico": 0,
+    "Q15_invalid_revolving": 0,
+    "Q16_negative_credit_counts": 0,
+    "Q17_open_above_total_accounts": 2,
+    "Q18_invalid_credit_history_date": 29,
+    "W01_missing_employment_length": 144195,
+    "W02_missing_dti": 52,
+    "W03_missing_revol_util": 1766,
+    "W04_missing_mort_acc": 49999,
+    "W05_utilization_above_100": 7328,
+    "W06_income_above_1m": 583,
+    "W07_joint_application": 116474,
+    "distinct_loan_ids": 2260668,
+    "input_rows": 2260701,
+    "quarantined_rows": 4379,
+    "status_excluded_policy": 2719,
+    "status_open_delinquent": 34120,
+    "status_open_performing": 875084,
+    "status_resolved_bad": 268387,
+    "status_resolved_good": 1076012
+  },
+  "engine": "pandas",
+  "etl_seconds": 22.421360582928173,
+  "layer_checks": [
+    {
+      "check_name": "rows_partition_into_accepted_and_quarantined",
+      "expected": "2260701",
+      "observed": "2256322 + 4379",
+      "status": "PASS"
+    },
+    {
+      "check_name": "quarantine_share_within_limit",
+      "expected": "<= 0.02",
+      "observed": "0.001937",
+      "status": "PASS"
+    },
+    {
+      "check_name": "every_accepted_row_has_known_status",
+      "expected": "2256322",
+      "observed": "2256322",
+      "status": "PASS"
+    },
+    {
+      "check_name": "loan_ids_unique_among_loans",
+      "expected": "2260668",
+      "observed": "2260668",
+      "status": "PASS"
+    },
+    {
+      "check_name": "row_count_matches_control_total",
+      "expected": "2260701",
+      "observed": "2260701",
+      "status": "PASS"
+    },
+    {
+      "check_name": "source_checksum_matches_manifest",
+      "expected": "55c16f75120f897683f02e7aabcf080d0e4a20c4832feb1d592cfa941bd62a2d",
+      "observed": "55c16f75120f897683f02e7aabcf080d0e4a20c4832feb1d592cfa941bd62a2d",
+      "status": "PASS"
+    },
+    {
+      "check_name": "spark_and_pandas_agree_on_every_count",
+      "expected": "all match",
+      "observed": "62 of 62 match",
+      "status": "PASS"
+    }
+  ],
+  "matching_values": 62,
+  "matured_cohort_loans": 673515,
+  "source_bytes_gz": 392582231,
+  "source_sha256": "55c16f75120f897683f02e7aabcf080d0e4a20c4832feb1d592cfa941bd62a2d"
+}

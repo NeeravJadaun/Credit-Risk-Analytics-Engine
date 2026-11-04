@@ -1,0 +1,41 @@
+cost_scenario,fn_cost,fp_cost,policy,hypothetical_cost_units,rank_in_scenario
+fn_1_fp_1,1,1,Baseline: no referrals,42131.0,1
+fn_1_fp_1,1,1,A: top 5% by score,46833.0,4
+fn_1_fp_1,1,1,A: top 10% by score,52789.0,7
+fn_1_fp_1,1,1,A: top 20% by score,67272.0,10
+fn_1_fp_1,1,1,B: score >= 0.20,58296.0,8
+fn_1_fp_1,1,1,B: score >= 0.25,47733.0,5
+fn_1_fp_1,1,1,B: score >= 0.30,43830.0,2
+fn_1_fp_1,1,1,C: score >= 0.15 and DTI >= 20,66238.0,9
+fn_1_fp_1,1,1,C: score >= 0.20 and DTI >= 20,52449.0,6
+fn_1_fp_1,1,1,C: score >= 0.25 and DTI >= 20,45761.0,3
+fn_3_fp_1,3,1,Baseline: no referrals,126393.0,10
+fn_3_fp_1,3,1,A: top 5% by score,121647.0,6
+fn_3_fp_1,3,1,A: top 10% by score,119409.0,2
+fn_3_fp_1,3,1,A: top 20% by score,120074.0,3
+fn_3_fp_1,3,1,B: score >= 0.20,119064.0,1
+fn_3_fp_1,3,1,B: score >= 0.25,121097.0,5
+fn_3_fp_1,3,1,B: score >= 0.30,123928.0,8
+fn_3_fp_1,3,1,C: score >= 0.15 and DTI >= 20,124012.0,9
+fn_3_fp_1,3,1,C: score >= 0.20 and DTI >= 20,120955.0,4
+fn_3_fp_1,3,1,C: score >= 0.25 and DTI >= 20,122211.0,7
+fn_5_fp_1,5,1,Baseline: no referrals,210655.0,10
+fn_5_fp_1,5,1,A: top 5% by score,196461.0,7
+fn_5_fp_1,5,1,A: top 10% by score,186029.0,4
+fn_5_fp_1,5,1,A: top 20% by score,172876.0,1
+fn_5_fp_1,5,1,B: score >= 0.20,179832.0,2
+fn_5_fp_1,5,1,B: score >= 0.25,194461.0,6
+fn_5_fp_1,5,1,B: score >= 0.30,204026.0,9
+fn_5_fp_1,5,1,C: score >= 0.15 and DTI >= 20,181786.0,3
+fn_5_fp_1,5,1,C: score >= 0.20 and DTI >= 20,189461.0,5
+fn_5_fp_1,5,1,C: score >= 0.25 and DTI >= 20,198661.0,8
+fn_10_fp_1,10,1,Baseline: no referrals,421310.0,10
+fn_10_fp_1,10,1,A: top 5% by score,383496.0,7
+fn_10_fp_1,10,1,A: top 10% by score,352579.0,4
+fn_10_fp_1,10,1,A: top 20% by score,304881.0,1
+fn_10_fp_1,10,1,B: score >= 0.20,331752.0,3
+fn_10_fp_1,10,1,B: score >= 0.25,377871.0,6
+fn_10_fp_1,10,1,B: score >= 0.30,404271.0,9
+fn_10_fp_1,10,1,C: score >= 0.15 and DTI >= 20,326221.0,2
+fn_10_fp_1,10,1,C: score >= 0.20 and DTI >= 20,360726.0,5
+fn_10_fp_1,10,1,C: score >= 0.25 and DTI >= 20,389786.0,8
