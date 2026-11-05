@@ -1,4 +1,4 @@
-# NOT VERIFIED: this repository has not been pushed, so this workflow has never run.
+# First passing run: https://github.com/NeeravJadaun/Credit-Risk-Analytics-Engine/actions/runs/41762845789
 # Runs lint and the unit tests. Integration tests need the full dataset and local services.
 name: ci
 on: [push, pull_request]
